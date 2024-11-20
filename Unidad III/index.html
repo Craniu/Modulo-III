@@ -6,11 +6,31 @@
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 
-    <title>Document</title>
+    <title>Unidad III</title>
 </head>
 <body>
     
+    <div class="contenedor">
+        <button id="amarillo">Amarillo</button>
+        <button id="rojo">Rojo</button>
+        <button id="elegirX" onclick="pintar('blue')">Elegir</button>
+    </div>
 
+    <div class="contenedor2">
+    <img id="img-1" src="https://placedog.net/200x200" alt="" onclick="agregarBordes('img-1')">
+    <img id="img-2" src="https://placedog.net/200x200" alt="" onclick="agregarBordes('img-2')">
+    <img id="img-3" src="https://placedog.net/200x200" alt="" onclick="agregarBordes('img-3')">
+    <br>
+    <div id="el-1" class="element" style="background-color: red"></div>
+    <div id="el-2" class="element" style="background-color: yellow"></div>
+    </div>
+
+    <div class="contenedor">
+        <input type="number" id="in">
+        <button id="btnValidar">Validar</button>
+        <br>
+        <p id="parrafo">Ingrese un numero</p>
+    </div>
 
     <script src="./assets/js/script.js"></script>
 </body>

@@ -1,0 +1,23 @@
+.contenedor{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    border: solid 2px 333;
+}
+.contenedor button {
+    width: 150px;
+}
+.contenedor2{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    border: solid 2px 333;
+}
