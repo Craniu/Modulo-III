@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Unidad IV</title>
+</head>
+
+<body>
+
+    <ul id="dynamic-content"> </ul>
+    <script>
+        const data = ['Javiera', 'Camila', 'Francisco', 'Jorge', 'Daniela']
+        const d = document.querySelector("#dynamic-content")
+        for (let item of data) {
+            d.innerHTML += `<li> ${item} </li>`
+        } 
+    </script>
+
+    <div>  
+        <h2>Escala mayor de Do:</h2>  
+        <ul></ul> 
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
