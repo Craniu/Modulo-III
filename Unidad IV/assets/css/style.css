@@ -1,0 +1,29 @@
+body {
+    padding: 20px;
+}
+.articulo {
+    width: 250px;
+    padding: 10px;
+    background: lightgray;
+    }
+
+.targeta {
+width: 250px;
+    margin: 20px;
+    padding: 5px;
+    border: solid 2px black;
+    text-align: center;
+}
+
+.iconos {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.articulo2 {
+    width: 250px;
+    padding: 10px;
+    background: lightgray;
+    }
