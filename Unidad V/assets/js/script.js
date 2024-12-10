@@ -68,10 +68,31 @@ btnEliminar.addEventListener("click", () =>{
 
 
 
+//
+const servicios = [  
+    { id: 1, nombre: "Agua" },  
+    { id: 2, nombre: "Electricidad" },  
+    { id: 3, nombre: "Gas" },  
+    { id: 4, nombre: "Internet" },  
+    { id: 5, nombre: "Cable Tv" }, 
+];
+const docCtas = document.querySelector(".servicios")
 
-const invitados = [
-    { id: 431, nombre: "Jhonny Depp" },
-    { id: 124, nombre: "Brad Pitt" },
-    { id: 541, nombre: "Leonardo DiCaprio" },
-    { id: 664, nombre: "Morgan Freeman" }
-   ];
+
+
+const cargarCtas = function (){
+    let htmlServ = "";
+    for(let servicio of servicios){
+        htmlServ += `
+        <li>${servicio.nombre}</li><button onclick="borraCta('${servicio.id}')">Borrar</button>
+        `;
+    }
+    docCtas.innerHTML = htmlServ;
+}
+
+
+const borraCta = function (id){
+    servicios.splice(servicios.findIndex((item)=>item.id == id), 1);
+    cargarCtas();
+};
+cargarCtas();
