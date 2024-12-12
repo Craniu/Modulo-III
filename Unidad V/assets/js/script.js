@@ -96,3 +96,68 @@ const borraCta = function (id){
     cargarCtas();
 };
 cargarCtas();
+
+
+
+//includes
+const pelmasos = ["Julio", "Palta", "Flanders", "Daniela", "Miguelito"];
+const btnValidar = document.querySelector("#validar");
+const txtIn = document.querySelector("#text");
+const pelmaDoc = document.querySelector("#busqueda");
+
+const cargarPelmasos = function() {
+    let html = "";
+    for (let item of pelmasos){
+        html += `
+            <li>${item}</li>
+        `;
+    }
+    pelmaDoc.innerHTML = html;
+}
+
+
+cargarPelmasos();
+btnValidar.addEventListener("click",()=>{
+    if(txtIn.value != ""){
+        if(pelmasos.includes(txtIn.value)){
+            alert("El pelmaso Si existe en la lista");
+        }else{
+            alert("El pelmaso no existe en la lista");
+        }
+    }else{
+        alert("Ingrese un pelmaso para validarlo");
+    }
+    txtIn.value = "";
+});
+
+
+//
+const estaciones = ["Verano", "Otoño", "Invierno", "Primavera"];
+estaciones.forEach(x => console.log(x)) /* con arrow functions */ 
+
+body = document.querySelector("body") 
+const valores = [200, 100, 500, 300, 250] 
+valores.forEach(x => body.innerHTML += `<p> ${2* x} </p>`)
+
+let trabajadores = [ 
+    {nombre: "Contanza", cargo: "Chef"},
+    {nombre: "Luis", cargo: "garzón"},
+    {nombre: "Estefany", cargo: "Administradora"}, 
+    {nombre: "Andrés", cargo: "Recepcionista"}, 
+    {nombre: "Pedro", cargo: "garzón"}, 
+    {nombre: "Felipe", cargo: "Aseo"}, 
+    {nombre: "Maria", cargo: "garzón"}, 
+    {nombre: "Diego", cargo: "garzón"}
+];
+const lista2 = trabajadores.filter(x => x.cargo == "garzón");
+console.log(`Hay ${lista2.length} garzones`);
+console.log(lista2);
+
+const estudiantes = [ 
+    { nombre: "Juan", nota: 3.4 }, 
+    { nombre: "Laura", nota: 6 }, 
+    { nombre: "Katherine", nota: 4.3 }, 
+    { nombre: "Jonathan", nota: 5.4 } 
+]; 
+const estudiantesOrdenado = estudiantes.sort((x,y) => x.nota- y.nota) ;
+console.table(estudiantesOrdenado);
